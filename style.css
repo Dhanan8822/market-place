@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,500;1,900&display=swap');
+
+
+:root{
+    --main-color:pink;
+    --bg:black;
+    --border:.3rem solid red;
+}
+
+body{
+    background:url(image/Bg\ cover.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+
+section{
+    padding: 2rem 7%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.header{
+ 
+    
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--border);
+    position: fixed;
+padding: .3rem 5%;
+
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+
+
+    
+
+
+}
+
+
+.header .logo img{
+    height: 6rem;
+}
+
+
+.header .menu a{
+    color: #fff;
+    font-size: 20px;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+
+.header .menu a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid red;
+    padding-bottom: .3rem;
+}
+
+
+
+.header .icon div{
+    color: #fff;
+    font-size: 20px;
+    padding: .2rem ;
+
+    cursor: pointer;
+}
+
+
+.header .icon div:hover{
+    color: var(--main-color);
+}
+
+
+
+#menu-btn{
+    display: none;
+}
+
+
+.header .search-form{
+    position: absolute;
+   top: 115%;
+    right: 9%;
+    width: 30rem;
+    height: 3rem;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    border: .1rem solid red;
+
+    transform: scaleY(0);
+    transform-origin: top;
+
+    }
+    
+
+    .header .search-form.active{
+        transform: scaleY(1);
+    }
+
+
+    .header .search-form input{
+        width: 100%;
+        height: 100%;
+        font-size: 15px;
+        padding: 1rem;
+    }
+
+
+
+    .header .search-form .Aet{
+        width: 100%;
+        height: 40.5px;
+        background: #ff7300;
+        border: 2px solid black;
+        color:black;
+
+        font-size: 15px;
+
+    }
+
+    .header .search-form .Aet:hover{
+        color: pink;
+
+    }
+
+
+
+    
+    .home{
+        background-image: url(image/Bg\ cover.jpg);
+        display: flex;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+
+    .home .contant{
+        align-items: center;
+        position: absolute;
+        
+        margin: 20px 7%;
+
+    }
+
+
+   .home .contant h3{
+        font-size: 30px;
+    }
+
+
+
+
+    .home .contant p{
+        font-size: 1rem;
+        font-weight: lighter;
+        padding: 1rem 0;
+        color: #fff;
+    }
+    /* media queries */
+
+
+        
+
+    @media(max-width:991px){
+        #menu-btn{
+            display: inline-block;
+        }
+
+
+
+        .header .menu{
+            position: absolute;
+            top: 105%;
+            right: -100%;
+            background: #fff;
+            
+    width: 10rem;
+    height: calc(100vh - 9.5rem);
+        }
+
+        
+        .header .menu.active{
+            right: 0;
+        }
+
+        .header .menu a{
+            display: block;
+            margin: 1.5rem;
+            padding: .3rem;
+            font-size: 1rem;
+            color: black;
+        }
+
+        .header .search-form{
+            width: 90%;
+            right: 1rem;
+          
+        }
+
+
+        
+section{
+    padding: 2rem ;
+}
+
+        
+        
+    }
